@@ -1,0 +1,190 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+header {
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.title {
+  font-size: 48px;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 32px;
+  margin: 10px 0;
+  color: #555;
+}
+
+#leaderboard-section {
+  margin: 30px auto;
+  width: 50%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Remove old color rules, as they are now handled inline in script.js */
+#expand-leaderboard {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#expand-leaderboard:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#game-section {
+  margin: 30px 0;
+}
+
+.try-now {
+  font-size: 36px;
+  padding: 15px 30px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.try-now:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#game-content {
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+#game-content.show {
+  opacity: 1;
+}
+
+input {
+  margin: 5px;
+  padding: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+
+input.green {
+  border-color: #28a745; /* Green for correct */
+  background-color: #e6ffe6;
+}
+
+input.red {
+  border-color: #dc3545; /* Red for incorrect */
+  background-color: #ffe6e6;
+}
+
+button {
+  margin: 5px;
+  padding: 8px 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+#hint-button {
+  background-color: #ff9800;
+}
+
+#hint-button:hover {
+  background-color: #f57c00;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  display: block;
+  margin-top: 5px;
+}
+
+.hint-text {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #fff3e0;
+  border: 1px solid #ff9800;
+  border-radius: 5px;
+  display: none;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 36px; }
+  .subtitle { font-size: 24px; }
+  #leaderboard-section { width: 90%; }
+  table th, table td { padding: 8px; font-size: 14px; }
+  .try-now { font-size: 28px; padding: 10px 20px; }
+  input { width: 100%; max-width: 250px; }
+  #game-content { padding: 0 10px; }
+  #hint-button, button { padding: 6px 12px; }
+  .hint-text { font-size: 14px; padding: 8px; }
+  footer { padding: 15px; }
+  .footer-text { font-size: 14px; }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 28px; }
+  .subtitle { font-size: 20px; }
+  #leaderboard-section { width: 95%; }
+  table th, table td { padding: 6px; font-size: 12px; }
+  .try-now { font-size: 24px; padding: 8px 16px; }
+  input { max-width: 200px; }
+  #hint-button, button { padding: 4px 10px; }
+  .hint-text { font-size: 12px; padding: 6px; }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Master</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">Memory Master</h1>
+    <h2 class="subtitle">CS4348.503</h2>
+  </header>
+
+  <section id="leaderboard-section">
+    <h3>Leaderboard</h3>
+    <table id="leaderboard"></table>
+    <button id="expand-leaderboard" onclick="toggleLeaderboard()">Expand</button>
+  </section>
+
+  <section id="game-section">
+    <button class="try-now" onclick="showGame()">Try Now</button>
+    <div id="game-content" style="display: none;">
+      <div id="player-name">
+        <label for="name">Enter your name: </label>
+        <input type="text" id="name" required>
+        <span id="name-error" class="error-message"></span><br>
+        <button onclick="startGame()">Start</button>
+      </div>
+      <div id="game-inputs" style="display: none;">
+        <p>Address: <span id="address"></span></p>
+        <p>Page Size: 128 bytes</p>
+        <p>Page Table: <span id="page-table"></span></p>
+        <div id="inputs">
+          <input type="text" placeholder="VPN (decimal)" id="vpn"><br>
+          <input type="text" placeholder="Offset (decimal)" id="offset"><br>
+          <input type="text" placeholder="PFN (decimal)" id="pfn"><br>
+          <input type="text" placeholder="Physical Address (decimal)" id="phys"><br>
+          <div id="button-container">
+            <button id="submit-button" onclick="submitAnswers()">Submit</button>
+            <button id="hint-button" onclick="showHint()">Hint</button>
+            <button id="play-again" onclick="playAgain()" style="display: none;">Play Again</button>
+          </div>
+        </div>
+        <p>Score: <span id="score">0</span></p>
+        <div id="hint-text" class="hint-text"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="footer-text">by</p>
+    <p class="footer-text">James Human</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
